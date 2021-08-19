@@ -26,3 +26,14 @@ docker run -d -it --name simple devopsdockeruh/simple-web-service:ubuntu
 docker exec -it simple bash
 Secret message is: 'You can find the source code here: https://github.com/docker-hy'
 ```
+
+## 1.4
+
+```
+docker run -d -it --name site ubuntu
+docker exec -it site bash
+apt-get update
+apt-get install curl
+sh -c 'echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website;'
+helsinki.fi
+```
