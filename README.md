@@ -18,3 +18,11 @@ CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
 docker images
 REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
 ```
+
+## 1.3
+
+```
+docker run -d -it --name simple devopsdockeruh/simple-web-service:ubuntu
+docker exec -it simple bash
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+```
