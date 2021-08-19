@@ -24,6 +24,7 @@ REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
 ```
 docker run -d -it --name simple devopsdockeruh/simple-web-service:ubuntu
 docker exec -it simple bash
+tail -f ./text.log
 Secret message is: 'You can find the source code here: https://github.com/docker-hy'
 ```
 
@@ -36,4 +37,17 @@ apt-get update
 apt-get install curl
 sh -c 'echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website;'
 helsinki.fi
+```
+
+## 1.5
+
+```
+REPOSITORY                          TAG       IMAGE ID       CREATED        SIZE
+devopsdockeruh/simple-web-service   ubuntu    4e3362e907d5   5 months ago   83MB
+devopsdockeruh/simple-web-service   alpine    fd312adc88e0   5 months ago   15.7MB
+
+docker run -d -it --name alp devopsdockeruh/simple-web-service:alpine
+docker exec -it alp sh
+tail -f ./text.log
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
 ```
