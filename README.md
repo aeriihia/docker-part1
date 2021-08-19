@@ -51,3 +51,12 @@ docker exec -it alp sh
 tail -f ./text.log
 Secret message is: 'You can find the source code here: https://github.com/docker-hy'
 ```
+
+## 1.6
+
+```
+docker run -it devopsdockeruh/pull_exercise
+Give me the password: basics
+You found the correct password. Secret message is:
+"This is the secret message"
+```
