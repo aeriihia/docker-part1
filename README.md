@@ -72,5 +72,6 @@ CMD server
 Commands
 ```
 docker build . -t web-server
+docker tag web-server:latest web-server:web-server
 docker run web-server
 ```
