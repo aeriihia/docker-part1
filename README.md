@@ -92,3 +92,8 @@ Commands
 docker build . -t curler
 docker run -it curler
 ```
+
+## 1.9
+```
+docker run -v "/home/text.log:/usr/src/app/text.log" devopsdockeruh/simple-web-service
+```
