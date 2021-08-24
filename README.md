@@ -72,6 +72,24 @@ CMD server
 Commands
 ```
 docker build . -t web-server
-docker tag web-server:latest web-server:web-server
 docker run web-server
+```
+
+## 1.8
+
+Dockerfile
+```
+FROM ubuntu:18.04
+WORKDIR /usr/src/app
+COPY script.sh .
+RUN chmod +x script.sh
+RUN apt-get update
+RUN apt-get -y install curl
+CMD ./script.sh
+```
+
+Commands
+```
+docker build . -t curler
+docker run -it curler
 ```
