@@ -97,3 +97,8 @@ docker run -it curler
 ```
 docker run -v "/home/text.log:/usr/src/app/text.log" devopsdockeruh/simple-web-service
 ```
+
+## 1.10
+```
+docker run -p 4567:8080 web-server
+```
