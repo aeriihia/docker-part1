@@ -102,3 +102,20 @@ docker run -v "/home/text.log:/usr/src/app/text.log" devopsdockeruh/simple-web-s
 ```
 docker run -p 4567:8080 web-server
 ```
+
+## 1.11
+
+Dockerfile
+```
+FROM openjdk:8
+EXPOSE 8080
+WORKDIR /usr/src/app
+COPY . .
+RUN ./mvnw package
+CMD ["java", "-jar", "./target/docker-example-1.1.3.jar"]
+```
+
+Commands
+```
+docker build . -t spring-project && docker run -p 8080:8080 spring-project
+```
