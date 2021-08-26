@@ -119,3 +119,22 @@ Commands
 ```
 docker build . -t spring-project && docker run -p 8080:8080 spring-project
 ```
+
+## 1.12
+
+Dockerfile
+```
+FROM node
+EXPOSE 5000
+WORKDIR /usr/src/app
+COPY . .
+RUN npm install
+RUN npm run build
+RUN npm install -g serve
+CMD ["serve", "-s", "-l", "5000", "build"]
+```
+
+Commands
+```
+docker build . -t example-frontend && docker run -p 5000:5000 example-frontend
+```
