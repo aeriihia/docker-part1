@@ -189,6 +189,4 @@ docker build . -t example-backend && docker run -p 8080:8080 example-backend
 ```
 
 ## 1.16
-```
 https://thawing-savannah-73156.herokuapp.com/
-```
